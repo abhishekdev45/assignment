@@ -67,7 +67,7 @@ const FormComponent = () => {
       .catch((error) => {
         console.error("Error getting access token:", error);
       });
-  }, []);
+  }, [window.location.pathname]);
 
   useEffect(() => {
     // Set a timeout to clear the error message after 4 seconds
