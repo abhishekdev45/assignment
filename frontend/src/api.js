@@ -1,1 +1,1 @@
-export const url = 'https://assignment-backend4.onrender.com'
+export const url = process.env.REACT_APP_URI
