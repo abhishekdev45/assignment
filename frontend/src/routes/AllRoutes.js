@@ -6,8 +6,10 @@ export const AllRoutes = () => {
   return (
     <div className="dark:bg-darkbg">
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
+
         <Route path="/" element={<FormComponent />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        
       </Routes>
     </div>
   );
