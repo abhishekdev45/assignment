@@ -70,12 +70,12 @@ const FormComponent = () => {
   }, [window.location.pathname]);
 
   useEffect(() => {
-    // Set a timeout to clear the error message after 4 seconds
+   
     const timeout = setTimeout(() => {
       setBackendError("");
     }, 4000);
 
-    // Clear the timeout on component unmount
+  
     return () => clearTimeout(timeout);
   }, [backendError]);
 
@@ -104,14 +104,14 @@ const FormComponent = () => {
     setFormData((prevFormData) => ({
       ...prevFormData,
       country: value,
-      state: "", // Reset state value
-      city: "", // Reset city value
+      state: "", 
+      city: "", 
     }));
     // Fetch list of states based on selected country
     axios
       .get(`https://www.universal-tutorial.com/api/states/${value}`, {
         headers: {
-          Authorization: `Bearer ${authToken}`, // Replace with your access token
+          Authorization: `Bearer ${authToken}`, 
           Accept: "application/json",
         },
       })
@@ -130,13 +130,13 @@ const FormComponent = () => {
     setFormData((prevFormData) => ({
       ...prevFormData,
       state: value,
-      city: "", // Reset city value
+      city: "", 
     }));
     // Fetch list of cities based on selected state
     axios
       .get(`https://www.universal-tutorial.com/api/cities/${value}`, {
         headers: {
-          Authorization: `Bearer ${authToken}`, // Replace with your access token
+          Authorization: `Bearer ${authToken}`, 
           Accept: "application/json",
         },
       })
