@@ -328,6 +328,7 @@ const FormComponent = () => {
               Other
             </label>
           </div>
+          {errors.gender && <span className="text-danger">{errors.gender}</span>}
         </div>
 
         <div className="form-group mb-3">
